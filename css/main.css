@@ -1,0 +1,112 @@
+/*This css program is set to re-form the index html and play a role as a method of all type*/
+* {
+	
+	text-decoration:none;
+	margin : 0;
+	padding :0;
+	color : black;
+	font-family : 'argh',Arial;
+}
+@font-face {
+    font-family: 'argh';
+    src: url('../font/Aaargh-webfont.eot');
+    src: url('../font/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Aaargh-webfont.woff2') format('woff2'),
+         url('../font/Aaargh-webfont.woff') format('woff'),
+         url('../font/Aaargh-webfont.ttf') format('truetype'),
+         url('font/Aaargh-webfont.svg#aaarghnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	min-width : 320px;
+	overflow : scroll;
+	margin-left :10%;
+	margin-right : 10%;
+}
+h1 {
+	font-family : sans-serif;
+}
+#maintitle {
+	margin-top : 5%;
+	margin-bottom : 5%;
+	margin-left : 0%;
+	text-align : left;
+	font-size : 3em;
+	
+}
+
+/*Define for navigation bar*/
+.home,
+.blog,
+.albums,
+.about {
+	display : inline-block;
+	width : 8em;	
+	margin-top : 0.25em; 
+	text-align : center;
+	font-size : 1.5em;
+	
+	
+}
+.main-nav {
+	min-height : 3em;
+	border-top : 6px solid #004f96;
+	border-bottom : 3px solid #004f96;	
+	
+
+}
+.main-nav b {
+	color : #004f96;	
+} 
+
+.main-nav a :hover {
+	color : gray;
+	text-decoration : underline;
+}
+/*Define for main content*/
+.previews{
+	margin-left : 5%;
+	margin-right : 5%;
+	margin-bottom : 5%;
+	margin-top : 1%;
+}
+section {
+	padding : 1em;
+	
+}
+.previews div {
+	margin : 2%;
+	border-bottom : 1px dashed gray;
+	border-left : 5px ridge green;
+}
+.previews p {
+	font-style : italic;
+	margin : 2%;
+}
+.previews h2 {
+	height : 2em;
+	border-bottom : 2px solid black;
+}
+.previews h3 {
+	margin-left : 1%;
+	position : relative;
+	
+}
+
+.previews time {
+	margin-top : 0.3em;	
+	font-size : 0.65em;
+	font-weight : lighter;
+	position : absolute;
+	right : 0;
+	color : gray;
+}
+.item_title a :hover {
+	color : red;
+	text-decoration : underline;
+}
+
+
