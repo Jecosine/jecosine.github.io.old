@@ -1,0 +1,4 @@
+function hele(){
+	
+	alert("heieihei");
+}

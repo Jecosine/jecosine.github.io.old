@@ -7,6 +7,14 @@
 	color : black;
 	font-family : 'argh',Arial;
 }
+html {
+	background : linear-gradient(180deg,#cbf2ff,white);
+	background-repeat: no-repeat;
+}
+li {
+	list-style-type : none;
+	display : inline-block;
+}
 @font-face {
     font-family: 'argh';
     src: url('../font/Aaargh-webfont.eot');
@@ -25,7 +33,9 @@ body {
 	overflow : scroll;
 	margin-left :10%;
 	margin-right : 10%;
+	
 }
+
 h1 {
 	font-family : sans-serif;
 }
@@ -35,8 +45,11 @@ h1 {
 	margin-left : 0%;
 	text-align : left;
 	font-size : 3em;
+
+	
 	
 }
+
 
 /*Define for navigation bar*/
 .home,
@@ -45,25 +58,33 @@ h1 {
 .about {
 	display : inline-block;
 	width : 8em;	
-	margin-top : 0.25em; 
+	margin-bottom:0;
+	padding-top : 0.25em; 
 	text-align : center;
 	font-size : 1.5em;
 	
 	
 }
-.main-nav {
-	min-height : 3em;
-	border-top : 6px solid #004f96;
-	border-bottom : 3px solid #004f96;	
+.main-nav li {
 	
+	padding : 0;
+	margin : 0;
+}
+.main-nav {
+	background-color : gray;
+	border-top : 6px solid black;
+	border-bottom : 3px solid black;	
+	padding :0;
 
 }
+
 .main-nav b {
-	color : #004f96;	
+	text-align : center;
+	color : #e7f9ff;	
 } 
 
 .main-nav a :hover {
-	color : gray;
+	color : white;
 	text-decoration : underline;
 }
 /*Define for main content*/
@@ -77,6 +98,7 @@ section {
 	padding : 1em;
 	
 }
+
 .previews div {
 	margin : 2%;
 	border-bottom : 1px dashed gray;
@@ -95,6 +117,10 @@ section {
 	position : relative;
 	
 }
+.previews a:hover{
+	color : gray;
+	text-decoration : underline;
+}
 
 .previews time {
 	margin-top : 0.3em;	
@@ -108,5 +134,5 @@ section {
 	color : red;
 	text-decoration : underline;
 }
-
+/* The sub-html style */
 
