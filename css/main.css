@@ -5,11 +5,10 @@
 	margin : 0;
 	padding :0;
 	color : black;
-	font-family : 'argh',Arial;
+	font-family : 'anony',sans-serif,'argh';
 }
 html {
-	background : linear-gradient(180deg,#cbf2ff,white);
-	background-repeat: no-repeat;
+	
 }
 li {
 	list-style-type : none;
@@ -27,12 +26,23 @@ li {
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'anony';
+    src: url('../font/Anonymous-webfont.eot');
+    src: url('../font/Anonymous-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Anonymous-webfont.woff2') format('woff2'),
+         url('../font/Anonymous-webfont.woff') format('woff'),
+         url('../font/Anonymous-webfont.ttf') format('truetype'),
+         url('../font/Aaargh-webfontAnonymous-webfont.svg#anonymousregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 body {
 	min-width : 320px;
 	overflow : scroll;
-	margin-left :10%;
-	margin-right : 10%;
+	margin-left :5%;
+	margin-right : 5%;
 	
 }
 
@@ -76,21 +86,24 @@ h1 {
 	border-bottom : 3px solid black;	
 	padding :0;
 
+
 }
 
 .main-nav b {
+	font-family : sans-serif;
 	text-align : center;
-	color : #e7f9ff;	
+	color : white;	
 } 
 
 .main-nav a :hover {
-	color : white;
+	color : black;
+	background-color : white;
 	text-decoration : underline;
 }
 /*Define for main content*/
 .previews{
-	margin-left : 5%;
-	margin-right : 5%;
+	margin-left : 3%;
+	margin-right : 3%;
 	margin-bottom : 5%;
 	margin-top : 1%;
 }
