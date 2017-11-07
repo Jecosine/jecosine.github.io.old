@@ -5,15 +5,105 @@
 	margin : 0;
 	padding :0;
 	color : black;
-	font-family : 'anony',sans-serif,'argh';
+	box-sizing: border-box;
+	font-family : Century,Times New Roman;
 }
-html {
+
+li{
+	color:gray;
+}
+
+h3 {
+	margin-left : 1%;
+	position : relative;
+}
+
+div.item {
+	position:relative;
+	margin-bottom : 1em;
+	margin-top : 1em;
+}
+
+div.navigation {
+	display : block;
+	width : 100%;
+	height : 2em;
+}
+div.nav {
+	float:right;
+	width:20em;
+	height:2em;
+}
+
+div.ico {
+	float:right;
+	width:2em;
+	height:2em;
+	background:url(../img/app.ico)  no-repeat;
+}
+
+div.sidebox {
+	position:fixed;
+	width : 250px;
+	line-height : 1.5;
+	float : left; 
+	display : block;
+	font-size:1em;
+}
+div.sidebox li {
+	font-size:1.25em;
+	margin-left:1em;
+}
+div.sidebox li :hover {
+	text-decoration:underline;
 	
 }
-li {
-	list-style-type : none;
-	display : inline-block;
+div.content {
+	float: right;
+	width: calc(98% - 250px);
+	font-size:1.1em;
+	
 }
+figure {
+	margin-top:0;
+}
+img.sidebox {
+	width : 16em;
+	height : 12em;
+	outline: 2px double gray;
+
+}
+
+  /* Much-improved spacing around code blocks. */
+
+
+  /* Remain Responsive! */
+@media screen and (max-width: 1008px) {
+	div.sidebox {display: none;}
+	div.content {width: 100%!important;}
+	
+    /* Have code blocks escape the document right-margin. */
+
+}
+div.tags {
+	display : inline-block;
+	float:right;
+	width: 100%;
+	height:2em;
+	border-bottom : 1px dashed gray;
+}
+li.topic {
+	float :right;
+	width : 6em;
+	height : 1.5em;
+	margin : 0px!Important;
+	padding-left:5px;
+}
+
+.item_title {
+	background-color:#d2d2d2;
+}
+/*
 @font-face {
     font-family: 'argh';
     src: url('../font/Aaargh-webfont.eot');
@@ -37,7 +127,7 @@ li {
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
 body {
 	min-width : 320px;
 	overflow : scroll;
@@ -46,8 +136,18 @@ body {
 	
 }
 
+
+main:after, div.sidebox:after, div.content:after,div.navigation:after,div.item:after,h3 {
+	content: '';
+	display: block;
+	clear: both;
+}
+
 h1 {
-	font-family : sans-serif;
+	font-family : Century,Times New Roman;
+	border-bottom: 5px double black;
+	margin-bottom : 5px;
+	font-size : 3em;
 }
 #maintitle {
 	margin-top : 5%;
@@ -61,91 +161,24 @@ h1 {
 }
 
 
-/*Define for navigation bar*/
-.home,
-.blog,
-.albums,
-.about {
-	display : inline-block;
-	width : 8em;	
-	margin-bottom:0;
-	padding-top : 0.25em; 
-	text-align : center;
-	font-size : 1.5em;
-	
-	
-}
-.main-nav li {
-	
-	padding : 0;
-	margin : 0;
-}
-.main-nav {
-	background-color : gray;
-	border-top : 6px solid black;
-	border-bottom : 3px solid black;	
-	padding :0;
 
 
-}
-
-.main-nav b {
-	font-family : sans-serif;
-	text-align : center;
-	color : white;	
-} 
-
-.main-nav a :hover {
-	color : black;
-	background-color : white;
-	text-decoration : underline;
-}
 /*Define for main content*/
-.previews{
-	margin-left : 3%;
-	margin-right : 3%;
-	margin-bottom : 5%;
-	margin-top : 1%;
-}
-section {
-	padding : 1em;
-	
-}
-
-.previews div {
-	margin : 2%;
-	border-bottom : 1px dashed gray;
-	border-left : 5px ridge green;
-}
 .previews p {
 	font-style : italic;
 	margin : 2%;
 }
 .previews h2 {
 	height : 2em;
-	border-bottom : 2px solid black;
-}
-.previews h3 {
-	margin-left : 1%;
-	position : relative;
+	border-bottom : 2px dashed black;
 	
 }
+
 .previews a:hover{
 	color : gray;
 	text-decoration : underline;
 }
 
-.previews time {
-	margin-top : 0.3em;	
-	font-size : 0.65em;
-	font-weight : lighter;
-	position : absolute;
-	right : 0;
-	color : gray;
-}
-.item_title a :hover {
-	color : red;
-	text-decoration : underline;
-}
+
 /* The sub-html style */
 
