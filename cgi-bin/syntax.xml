@@ -1,0 +1,29 @@
+		<!-- ====================================================== [ Python ] -->
+
+		<parser
+				displayName="Python"
+				id         ="python_syntax"
+				commentExpr="(?s:'''.*?''')|(?m-s:#.*?$)"
+		>
+			<classRange
+					mainExpr    ="(?&lt;=^class\x20).*?(?=\n\S|\Z)"
+			>
+				<className>
+					<nameExpr expr="\w+(?=[\(|:])" />
+				</className>
+				<function
+						mainExpr="(?&lt;=def\x20).+?(?=:)"
+				>
+					<functionName>
+						<funcNameExpr expr=".*" />
+					</functionName>
+				</function>
+			</classRange>
+			<function
+					mainExpr="(?&lt;=def\x20).+?(?=:)"
+			>
+				<functionName>
+					<nameExpr expr=".*" />
+				</functionName>
+			</function>
+		</parser>

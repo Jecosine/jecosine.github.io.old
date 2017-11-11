@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Brief Introduction of Python</title>
+		<meta charset="utf-8" />
+		<meta name = "viewport" content = "width = device-width,initial-scale = 1" />
+		<link rel = "stylesheet" href = "../css/main.css">
+		<link rel = "shortcut icon" href = "../favicon.ico" />
+	</head>
+	<body>
+		<div class ="navigation">
+		</div>
+		<noscript><p>This is a page that requires Javascript</p></noscript>
+		<main class="document">
+			<div class="document">
+			<h2>Brief Introduction of Python</h2>
+			<p>As Python become a widely used language,more and more people can't tolerate the emotion of taking a attemption to "play" with python.If you are new to python, reading this article first might help you get better understanding of python rather than walking in a misty forest.</p>
+			<h3>Why Choose Python?</h3>
+			<p>When we are working on a project,we will prefer to focus more on main implement of program than stack on a small but seems vital details,such as a v customize data structure.If you are using C or C++,you will feel crazy about it.But in Python you might not need to concern it too much because python is 'equiped' with a strong community,and various build-in type(they will be mention in later article in this series).Now let's see a small program do with python.</p>
+			<div class="codebar">
+				<div class="bar">
+				</div>
+				<pre>from PIL import Image
+from numpy import *
+
+imgdata = array(Image.open('001.jpg').convert('L'))
+for i in range(0,1024):
+	for j in range(0,576):
+		imgdata[i][j] = 255 - imgdata[i][j]
+Image.fromarray(imgdata).save('002.jpg')
+				</pre>
+				
+			</div>
+			</div>
+		</main>
+	</body>
+</html>

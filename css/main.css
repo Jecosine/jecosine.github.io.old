@@ -6,7 +6,8 @@
 	padding :0;
 	color : black;
 	box-sizing: border-box;
-	font-family : Century,Times New Roman;
+	font-family : 'Garamond', 'Georgia', Times New Romand;/
+	
 }
 
 li{
@@ -22,33 +23,46 @@ div.item {
 	position:relative;
 	margin-bottom : 1em;
 	margin-top : 1em;
+	font-size:1.1em;
 }
 
 div.navigation {
+
 	display : block;
 	width : 100%;
-	height : 2em;
+	height : 2.5em;
+	
 }
 div.nav {
+	font-size:1.25em;
 	float:right;
-	width:20em;
-	height:2em;
+	width:10em;
+	
 }
 
-div.ico {
+svg.ico {
 	float:right;
+	vertical-align:text-bottom;
 	width:2em;
 	height:2em;
-	background:url(../img/app.ico)  no-repeat;
+
 }
 
 div.sidebox {
+	vertical-align:bottom;
+	height:-webkit-fill-available;
+	overflow:auto;
+	padding-bottom:2em;
+	left : 30px;
 	position:fixed;
-	width : 250px;
+	width : 275px;
 	line-height : 1.5;
 	float : left; 
 	display : block;
 	font-size:1em;
+}
+.open div.sidebox {
+	margin-top:0;
 }
 div.sidebox li {
 	font-size:1.25em;
@@ -61,11 +75,12 @@ div.sidebox li :hover {
 div.content {
 	float: right;
 	width: calc(98% - 250px);
-	font-size:1.1em;
-	
+	font-size:1.25em;
+
 }
 figure {
-	margin-top:0;
+	margin-top:2px;
+	margin-left:2px;
 }
 img.sidebox {
 	width : 16em;
@@ -73,16 +88,67 @@ img.sidebox {
 	outline: 2px double gray;
 
 }
+div.open  {
+	float:left;
+	top:2em;
+	position:fixed;
+	left:0;
+	height:-webkit-fill-available;
+	width:20px;
+	background:gray;
+}
 
+
+
+div.open:hover  div.sidebox-index {
+	display:block;
+	left:auto;
+	
+	background:white;
+}
+div.sidebox-index  {
+	height:-webkit-fill-available;
+	vertical-align:bottom;
+	overflow:auto;
+	padding-left:20px;
+	padding-bottom:2em;
+	display:None;
+	width : 290px;
+	line-height : 1.5;
+	float : left; 
+	font-size:1em;
+	background:white;
+}
+div.sidebox-index li {
+	
+	font-size:1.25em;
+	margin-left:1em;
+}
+div.sidebox-index li :hover {
+	text-decoration:underline;
+	
+}
+
+img.sidebox-index {
+	width : 16em;
+	height : 12em;
+	outline: 2px double gray;
+
+}
   /* Much-improved spacing around code blocks. */
 
 
   /* Remain Responsive! */
 @media screen and (max-width: 1008px) {
-	div.sidebox {display: none;}
+	div.sidebox {display:None;}
+	div.open {display:block;}
 	div.content {width: 100%!important;}
 	
     /* Have code blocks escape the document right-margin. */
+
+}
+@media screen and (min-width: 1008px) {
+	div.open {display:None;}
 
 }
 div.tags {
@@ -115,7 +181,7 @@ li.topic {
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
 @font-face {
     font-family: 'anony';
     src: url('../font/Anonymous-webfont.eot');
@@ -127,7 +193,7 @@ li.topic {
     font-weight: normal;
     font-style: normal;
 
-}*/
+}
 body {
 	min-width : 320px;
 	overflow : scroll;
@@ -137,14 +203,9 @@ body {
 }
 
 
-main:after, div.sidebox:after, div.content:after,div.navigation:after,div.item:after,h3 {
-	content: '';
-	display: block;
-	clear: both;
-}
 
 h1 {
-	font-family : Century,Times New Roman;
+	font-family : Times New Roman;
 	border-bottom: 5px double black;
 	margin-bottom : 5px;
 	font-size : 3em;
@@ -181,4 +242,53 @@ h1 {
 
 
 /* The sub-html style */
+pre {
+	float:right;
+	font-family:Consolas;
+	text-align:left;
+	font-size:1.1em;
+	padding-left:2em;
+	margin-left:2%;
+	width:98%;
+	tab-size:4;
+	line-height:1.1em;
+	background-color:#d5d2d2;
+}
+pre strong {
+	font-family:Consolas;
+}
 
+div.bar:before {
+	float:left;
+	height:100%;
+	width:30px;
+	
+}
+
+main.document {
+	margin-left:80px;
+	margin-right:80px;
+	
+}
+div.document{
+	font-family:Georgia;
+}
+.document p {
+	margin:2%;
+	font-size:1.5em;
+	line-height:1.2em;
+}
+.document h2 {
+	font-size:2em;
+	border-bottom: 2px dashed gray;
+	padding-bottom: 10px;
+}
+.document h3 {
+	font-size:1.5em;
+}
+
+main:after, div.sidebox:after, div.content:after,div.navigation:after,div.item:after,h3,div.codebar:after,div.bar:after div.open{
+	content: '';
+	display: block;
+	clear: both;
+}
