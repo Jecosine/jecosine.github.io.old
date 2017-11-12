@@ -8,6 +8,7 @@ pyfile=open(sys.argv[1],'r')
 content = pyfile.read()
 words = content.split(' ')
 html=""
+
 for word in words:
 	for key in keywords:
 		if word.find(key) is not -1:

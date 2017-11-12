@@ -15,14 +15,14 @@ li{
 }
 
 h3 {
+	margin-top:2em;
 	margin-left : 1%;
-	position : relative;
+
 }
 
 div.item {
-	position:relative;
-	margin-bottom : 1em;
-	margin-top : 1em;
+	
+	margin-bottom : 2em;
 	font-size:1.1em;
 }
 
@@ -168,6 +168,7 @@ li.topic {
 
 .item_title {
 	background-color:#d2d2d2;
+	margin:0;
 }
 /*
 @font-face {
@@ -210,6 +211,11 @@ h1 {
 	margin-bottom : 5px;
 	font-size : 3em;
 }
+
+a:hover {
+	cursor:not-allowed;
+}
+
 #maintitle {
 	margin-top : 5%;
 	margin-bottom : 5%;
@@ -228,11 +234,12 @@ h1 {
 .previews p {
 	font-style : italic;
 	margin : 2%;
+	margin-bottom:0;
 }
 .previews h2 {
 	height : 2em;
 	border-bottom : 2px dashed black;
-	
+
 }
 
 .previews a:hover{
@@ -240,16 +247,24 @@ h1 {
 	text-decoration : underline;
 }
 
+span.code {
+	font-family:Consolas;
+	font-size:0.8em;
+}
 
 /* The sub-html style */
 pre {
-	float:right;
+	
 	font-family:Consolas;
+	overflow:auto;
+	width:98%;
+	overflow-y:hidden;
 	text-align:left;
 	font-size:1.1em;
-	padding-left:2em;
+	padding-left:1em;
+	padding-right:1em;
 	margin-left:2%;
-	width:98%;
+	
 	tab-size:4;
 	line-height:1.1em;
 	background-color:#d5d2d2;
@@ -266,9 +281,9 @@ div.bar:before {
 }
 
 main.document {
-	margin-left:80px;
-	margin-right:80px;
-	
+	margin-left:auto;
+	margin-right:auto;
+	max-width:900px;
 }
 div.document{
 	font-family:Georgia;
@@ -287,7 +302,21 @@ div.document{
 	font-size:1.5em;
 }
 
-main:after, div.sidebox:after, div.content:after,div.navigation:after,div.item:after,h3,div.codebar:after,div.bar:after div.open{
+ol {
+	width:inherit;
+	margin-left:2.5em;
+	padding:inherit;
+}
+ol li {
+	font-size : 1.5em;
+	font-weight:700;
+}
+
+.gray {
+	color:gray;
+}
+
+main:after, div.sidebox:after, div.content:after,div.navigation:after,div.item:after,div.codebar:after,div.bar:after div.open{
 	content: '';
 	display: block;
 	clear: both;
